@@ -1,0 +1,38 @@
+{
+  "cli": {
+    "version": "16.17.4"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios": {
+        "simulator": true
+      }
+    },
+    "preview": {
+      "distribution": "internal"
+    },
+    "production": {
+      "env": {
+        "EXPO_PUBLIC_BACKEND_URL": "https://smart-dormer.vibecode.run",
+        "EXPO_PUBLIC_VIBECODE_BACKEND_URL": "https://smart-dormer.vibecode.run",
+        "BACKEND_URL": "https://smart-dormer.vibecode.run",
+        "EXPO_PUBLIC_EXAMPLE_ENV_VAR": "test"
+      },
+      "ios": {
+        "distribution": "store"
+      },
+      "android": {
+        "distribution": "store"
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "ios": {
+        "ascAppId": "6775047272"
+      }
+    }
+  }
+}

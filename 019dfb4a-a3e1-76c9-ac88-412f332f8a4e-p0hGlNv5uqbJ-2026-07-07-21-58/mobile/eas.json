@@ -15,9 +15,9 @@
     },
     "production": {
       "env": {
-        "EXPO_PUBLIC_BACKEND_URL": "https://smart-dormer.vibecode.run",
-        "EXPO_PUBLIC_VIBECODE_BACKEND_URL": "https://smart-dormer.vibecode.run",
-        "BACKEND_URL": "https://smart-dormer.vibecode.run",
+   "EXPO_PUBLIC_BACKEND_URL": "https://puzzle-pics.onrender.com",
+"EXPO_PUBLIC_VIBECODE_BACKEND_URL": "https://puzzle-pics.onrender.com",
+"BACKEND_URL": "https://puzzle-pics.onrender.com",
         "EXPO_PUBLIC_EXAMPLE_ENV_VAR": "test"
       },
       "ios": {

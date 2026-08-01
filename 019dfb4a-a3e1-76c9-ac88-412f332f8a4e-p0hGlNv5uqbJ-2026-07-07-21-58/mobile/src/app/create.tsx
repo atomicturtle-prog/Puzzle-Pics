@@ -197,7 +197,10 @@ export default function CreateScreen() {
             onRenameObject={renameObject}
             onDeleteObject={deleteObject}
             onMoveObject={moveObject}
-            onContinue={() => setStep('finish')}
+            onContinue={() => {
+  console.log('CONTINUE CLICKED');
+  setStep('finish');
+}}
           />
         ) : step === 'finish' && image ? (
           <FinishStep

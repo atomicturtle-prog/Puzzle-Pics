@@ -197,10 +197,7 @@ export default function CreateScreen() {
             onRenameObject={renameObject}
             onDeleteObject={deleteObject}
             onMoveObject={moveObject}
-            onContinue={() => {
-  console.log('CONTINUE CLICKED');
-  setStep('finish');
-}}
+            onContinue={() => setStep('finish')}
           />
         ) : step === 'finish' && image ? (
           <FinishStep
@@ -439,8 +436,12 @@ function TagStep(props: TagStepProps) {
           <Pressable
             testID="tag-continue"
             disabled={props.objects.length < 1}
-            onPress={props.onContinue}
-            style={{ opacity: props.objects.length < 1 ? 0.35 : 1 }}
+            onPressIn={props.onContinue}
+            style={{
+  opacity: props.objects.length < 1 ? 0.35 : 1,
+  zIndex: 9999,
+  position: 'relative',
+}}
           >
             <View style={{
               ...stickerStyle(R.PINK, 12),

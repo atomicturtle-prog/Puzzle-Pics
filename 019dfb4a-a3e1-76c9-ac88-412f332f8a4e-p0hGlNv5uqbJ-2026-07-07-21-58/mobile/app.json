@@ -4,14 +4,14 @@
     "slug": "puzzle-pics",
     "icon": "./icon.png",
     "scheme": "vibecode",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "orientation": "portrait",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.vibecode.puzzlepics",
-      "buildNumber": "6",
+      "buildNumber": "7",
       "infoPlist": {
         "NSCameraUsageDescription": "HiddenPix uses the camera to capture photos inside the app before you publish them.",
         "NSPhotoLibraryUsageDescription": "HiddenPix accesses your photo library to let you choose media that appears in the app."

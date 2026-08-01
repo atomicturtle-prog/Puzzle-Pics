@@ -436,7 +436,10 @@ function TagStep(props: TagStepProps) {
           <Pressable
             testID="tag-continue"
             disabled={props.objects.length < 1}
-            onPressIn={props.onContinue}
+            onPressIn={() => {
+  console.log('PRESS IN FIRED');
+  props.onContinue();
+}}
             style={{
   opacity: props.objects.length < 1 ? 0.35 : 1,
   zIndex: 9999,

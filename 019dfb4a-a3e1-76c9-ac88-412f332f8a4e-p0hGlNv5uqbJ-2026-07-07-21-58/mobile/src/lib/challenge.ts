@@ -86,7 +86,7 @@ export async function uploadChallenge(
   const payload = buildPayload(puzzle, imageData, challengerName, challengerTime, message, remixMeta);
   const payloadStr = JSON.stringify(payload);
 
-  const baseUrl = process.env.EXPO_PUBLIC_BACKEND_URL!;
+  const baseUrl = 'https://puzzle-pics.onrender.com';
   const res = await fetch(`${baseUrl}/api/challenges`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },

@@ -174,7 +174,23 @@ export default function CreateScreen() {
             <ChevronLeft size={22} color={R.WHITE} />
           </Pressable>
           <StepIndicator step={step} />
-          <View style={{ width: 40 }} />
+          {step === 'tag' && objects.length > 0 ? (
+  <Pressable
+    onPress={() => setStep('finish')}
+    style={{
+      paddingHorizontal: 12,
+      paddingVertical: 8,
+      borderRadius: 10,
+      backgroundColor: R.PINK,
+    }}
+  >
+    <Text style={{ color: '#fff', fontWeight: '900', fontSize: 12 }}>
+      NEXT →
+    </Text>
+  </Pressable>
+) : (
+  <View style={{ width: 40 }} />
+)}
         </View>
 
         {step === 'image' ? (

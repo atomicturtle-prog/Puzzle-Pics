@@ -433,22 +433,17 @@ function TagStep(props: TagStepProps) {
               {props.objects.length} TAGGED
             </Text>
           </View>
-          <Pressable
-            testID="tag-continue"
-            disabled={props.objects.length < 1}
-            onPressIn={() => {
-  console.log('PRESS IN FIRED');
-  props.onContinue();
-}}
-            style={{
-  opacity: props.objects.length < 1 ? 0.35 : 1,
-  zIndex: 9999,
-  position: 'relative',
-}}
-          >
+      <Pressable
+  testID="tag-continue"
+  disabled={props.objects.length < 1}
+  onPress={props.onContinue}
+  style={{
+    opacity: props.objects.length < 1 ? 0.35 : 1,
+  }}
+>
             <View style={{
               ...stickerStyle(R.PINK, 12),
-              paddingHorizontal: 20, paddingVertical: 10,
+              paddingHorizontal: 20, paddingVertical: 10, pointerEvents: 'none',
             }}>
               <Text style={{ color: '#fff', fontWeight: '900', fontSize: 14, letterSpacing: 0.5 }}>CONTINUE →</Text>
             </View>
